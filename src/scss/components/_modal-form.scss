@@ -1,0 +1,106 @@
+.modal-form {
+  &__content {
+    color: #fff;
+    width: 26.04vw;
+    height: 31.25vw;
+    background: var(--color-text);
+    padding: 2.34vw 3.54vw 0 3.54vw;
+    text-align: center;
+  }
+  &__content_sucsses {
+    display: none;
+    .modal__title {
+      margin-top: 10%;
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 1.67vw;
+    line-height: 137%;
+  }
+  &__subtitle {
+    font-size: 0.94vw;
+    line-height: 156%;
+    margin: 0.83vw 0 1.77vw 0;
+  }
+  &__form-label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.73vw;
+    line-height: 135%;
+    text-align: start;
+    padding-left: 2.5vw;
+  }
+  &__form-input {
+    background: #fafafa;
+    box-shadow: inset 0px 0px 21px rgba(255, 255, 255, 0.4);
+    border-radius: 73px;
+    width: 100%;
+    height: 4.43vw;
+    padding: 1.46vw 1vw 1.46vw 2.45vw;
+    font-size: 0.94vw;
+    line-height: 133%;
+    letter-spacing: 0.03em;
+    margin-top: 0.63vw;
+
+    &::placeholder {
+      color: #b0b0b1;
+    }
+  }
+  &__form-button {
+    border-radius: 73px;
+    height: 4.43vw;
+    width: 100%;
+    color: #fff;
+    background: var(--color-red);
+    font-size: 0.83vw;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    margin: 1.3vw 0;
+    transition: all 0.5s ease;
+    &:hover {
+      background: var(--color-hover-red);
+    }
+  }
+  &__form-policy {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    width: 90%;
+  }
+  &__form-policy-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  &__form-policy-input + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+  }
+  &__form-policy-input + label::before {
+    content: '';
+    display: inline-block;
+    width: 1.04vw;
+    height: 1.04vw;
+    border-radius: 5px;
+    background: transparent;
+    border: 0.05vw solid var(--color-red);
+  }
+  &__form-policy-input:checked + label::before {
+    background: var(--color-red);
+    background-image: url('../images/check-input.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+  &__form-policy-text {
+    font-size: 0.73vw;
+    line-height: 136%;
+    margin-left: 0.73vw;
+  }
+  &__form-policy-link {
+    color: var(--color-red);
+  }
+}
